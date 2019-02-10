@@ -2,26 +2,10 @@ import {
    normalizeText
 } from '../../utilities';
 import * as searchBox from './search-box';
+import * as addBox from './add-box';
+import * as notesActions from '../../notes-actions';
 
 const notesListEl = document.querySelector('#notes-list');
-
-const notesList = [{
-      title: 'Notatka 1',
-      lastModified: '18/06/2018 14:00'
-   },
-   {
-      title: 'Notatka 2',
-      lastModified: '18/06/2018 14:00'
-   },
-   {
-      title: 'Notatka 3',
-      lastModified: '18/06/2018 14:00'
-   },
-   {
-      title: 'Notatka 4',
-      lastModified: '18/06/2018 14:00'
-   }
-];
 
 const generateNotesList = () => {
    const generateNoteHTML = note => {
@@ -33,7 +17,8 @@ const generateNotesList = () => {
       </li>`;
    };
 
-   const html = notesList
+   const html = notesActions
+      .getAll()
       .filter(note =>
          normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase()))
       )
@@ -44,4 +29,6 @@ const generateNotesList = () => {
 };
 
 generateNotesList();
+
 searchBox.init(() => generateNotesList());
+addBox.init(() => generateNotesList());
