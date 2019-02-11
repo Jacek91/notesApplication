@@ -17,5 +17,8 @@ noteTitleEl.textContent = firstNote.title;
 noteContentEl.textContent = firstNote.body;
 
 // Events
+events.noteShowEditorHandler(noteEditorBtn, noteContentEl, noteContentPreviewEl);
+events.noteShowPreviewHandler(notePreviewBtn, noteContentEl, noteContentPreviewEl);
 events.noteRemoveHandler(noteRemoveBtn, noteId);
+
 events.noteSaveHandler(noteContentForm, noteId, noteContentEl);

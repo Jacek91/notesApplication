@@ -11,7 +11,8 @@
    "author": "Jacek",
    "license": "ISC",
    "dependencies": {
-      "bootstrap": "^4.1.1"
+      "bootstrap": "^4.1.1",
+      "showdown": "^1.8.6"
    },
    "devDependencies": {
       "@babel/core": "^7.0.0-beta.49",

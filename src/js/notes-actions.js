@@ -39,3 +39,16 @@ export function remove(noteId) {
     notesList = notesList.filter(note => note.id !== noteId);
     console.log(`${noteId} - removed`);
 }
+
+export function save(noteId, noteContent) {
+    notesList.map(note => {
+        if (note.id === noteId) {
+            note.body = noteContent;
+            note.lastModified = new Date();
+        }
+
+        return note;
+    });
+
+    console.log(`${noteId} - saved`);
+}
