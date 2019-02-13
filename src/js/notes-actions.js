@@ -1,28 +1,10 @@
-let notesList = [{
-        id: 1,
-        title: 'Notatka 1',
-        body: '# asdfgh',
-        lastModified: '18/06/2018 14:00'
-    },
-    {
-        id: 2,
-        title: 'Notatka 2',
-        body: '# asdfgh',
-        lastModified: '18/06/2018 14:00'
-    },
-    {
-        id: 3,
-        title: 'Notatka 3',
-        body: '# asdfgh',
-        lastModified: '18/06/2018 14:00'
-    },
-    {
-        id: 4,
-        title: 'Notatka 4',
-        body: '# asdfgh',
-        lastModified: '18/06/2018 14:00'
-    }
-];
+import axios from './axios-api';
+
+axios.get('/notes').then(function (response) {
+    console.log(response);
+});
+
+let notesList = [];
 
 export function getAll() {
     return notesList;
@@ -31,7 +13,7 @@ export function getAll() {
 export function add(title) {
     notesList.push({
         title,
-        lastModified: '18/06/2018 14:00'
+        lastModified: Date.now()
     });
 }
 
@@ -44,7 +26,7 @@ export function save(noteId, noteContent) {
     notesList.map(note => {
         if (note.id === noteId) {
             note.body = noteContent;
-            note.lastModified = new Date();
+            note.lastModified = Date.now();
         }
 
         return note;
