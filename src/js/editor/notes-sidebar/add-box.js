@@ -1,4 +1,3 @@
-//add box
 import DOM from '../dom';
 import * as notesActions from '../../notes-actions';
 

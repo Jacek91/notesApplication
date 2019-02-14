@@ -4,7 +4,6 @@ import showdown from 'showdown';
 
 const mdConverter = new showdown.Converter();
 
-// Show editor
 function showEditor() {
     DOM.noteContentEl.classList.remove('d-none');
     DOM.noteContentPreviewEl.classList.add('d-none');
@@ -16,7 +15,6 @@ export function noteShowEditorHandler() {
     });
 }
 
-// Show preview
 function showPreview() {
     DOM.noteContentEl.classList.add('d-none');
     DOM.noteContentPreviewEl.classList.remove('d-none');
@@ -26,7 +24,6 @@ export function noteShowPreviewHandler() {
     DOM.notePreviewBtn.addEventListener('click', function () {
         const text = DOM.noteContentEl.value;
 
-        // Show preview only if MD content exists
         if (text) {
             const html = mdConverter.makeHtml(text);
 
@@ -36,14 +33,12 @@ export function noteShowPreviewHandler() {
     });
 }
 
-// Remove
 export function noteRemoveHandler(noteId) {
     DOM.noteRemoveBtn.addEventListener('click', function () {
         notesActions.remove(noteId);
     });
 }
 
-// Save
 export function noteSaveHandler(noteId) {
     DOM.noteContentForm.addEventListener('submit', function (event) {
         event.preventDefault();

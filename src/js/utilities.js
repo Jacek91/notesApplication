@@ -1,4 +1,3 @@
 export function normalizeText(text) {
-
-   return text.trim().toLowerCase();
+    return text.trim().toLowerCase();
 }

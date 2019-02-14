@@ -1,36 +1,47 @@
 import axios from './axios-api';
 
-axios.get('/notes').then(function (response) {
-    console.log(response);
-});
-
-let notesList = [];
-
 export function getAll() {
-    return notesList;
+    return new Promise((resolve, reject) => {
+        axios
+            .get('/notes')
+            .then(res => res.data)
+            .then(notes => resolve(notes))
+            .catch(err => console.log(err));
+    });
 }
 
 export function add(title) {
-    notesList.push({
-        title,
-        lastModified: Date.now()
+    return new Promise((resolve, reject) => {
+        axios
+            .post('/notes', {
+                title,
+                lastModified: Date.now()
+            })
+            .then(res => res.data)
+            .then(notes => resolve(notes))
+            .catch(err => console.log(err));
     });
 }
 
 export function remove(noteId) {
-    notesList = notesList.filter(note => note.id !== noteId);
-    console.log(`${noteId} - removed`);
+    return new Promise((resolve, reject) => {
+        axios
+            .delete(`/notes/${noteId}`)
+            .then(res => res.data)
+            .then(notes => resolve(notes))
+            .catch(err => console.log(err));
+    });
 }
 
 export function save(noteId, noteContent) {
-    notesList.map(note => {
-        if (note.id === noteId) {
-            note.body = noteContent;
-            note.lastModified = Date.now();
-        }
-
-        return note;
+    return new Promise((resolve, reject) => {
+        axios
+            .patch(`/notes/${noteId}`, {
+                body: noteContent,
+                lastModified: Date.now()
+            })
+            .then(res => res.data)
+            .then(notes => resolve(notes))
+            .catch(err => console.log(err));
     });
-
-    console.log(`${noteId} - saved`);
 }
