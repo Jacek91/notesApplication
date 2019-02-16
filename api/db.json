@@ -1,38 +1,19 @@
 {
-    "notes": [{
-            "id": 1,
-            "title": "Notatka 1234",
-            "body": "# asdfgh\n\n1. asd\n2. asd\n3. asd",
-            "lastModified": 1528724410953
-        },
-        {
-            "id": 2,
-            "title": "Notatka 2",
-            "body": "# asdfgh",
-            "lastModified": 1528711715913
-        },
-        {
-            "id": 3,
-            "title": "Notatka 3",
-            "body": "# asdfgh",
-            "lastModified": 1528711715913
-        },
-        {
-            "id": 4,
-            "title": "Notatka 4",
-            "body": "# asdfgh",
-            "lastModified": 1528711715913
-        },
-        {
-            "id": 5,
-            "title": "Notatka 5",
-            "body": "# asdfgh",
-            "lastModified": 1528711715913
-        },
-        {
-            "title": "asdf123",
-            "lastModified": 1528724388262,
-            "id": 6
-        }
-    ]
+  "notes": [
+    {
+      "title": "Notatka 1",
+      "lastModified": 1550324288199,
+      "id": 1
+    },
+    {
+      "title": "Notatka 2",
+      "lastModified": 1550324291027,
+      "id": 2
+    },
+    {
+      "title": "Notatka 3",
+      "lastModified": 1550324295751,
+      "id": 3
+    }
+  ]
 }

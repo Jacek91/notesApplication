@@ -1,4 +1,4 @@
-import DOM from '../dom';
+import DOM from '../../dom';
 import {
     format
 } from 'date-fns';
@@ -8,6 +8,8 @@ import {
 import * as searchBox from './search-box';
 import * as addBox from './add-box';
 import * as notesActions from '../../notes-actions';
+
+console.log(DOM());
 
 const generateNoteHTML = note => {
     return `<li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -27,11 +29,15 @@ const generateNotesList = () => {
             .map(note => generateNoteHTML(note))
             .join('');
 
-        DOM.notesListEl.innerHTML = html;
+        DOM().notesListEl.innerHTML = html;
     });
 };
 
-generateNotesList();
+const init = () => {
+    generateNotesList();
 
-searchBox.init(() => generateNotesList());
-addBox.init(() => generateNotesList());
+    searchBox.init(() => generateNotesList());
+    addBox.init(() => generateNotesList());
+};
+
+export default init;

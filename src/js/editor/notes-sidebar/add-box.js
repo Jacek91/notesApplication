@@ -1,4 +1,4 @@
-import DOM from '../dom';
+import DOM from '../../dom';
 import * as notesActions from '../../notes-actions';
 
 export function init(onChangeCallback) {

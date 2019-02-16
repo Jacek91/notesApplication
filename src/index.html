@@ -6,72 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
 
-    <title>Checkout example for Bootstrap</title>
+    <title>Aplikacja Notatki</title>
 </head>
 
 <body class="bg-light">
-
-    <div class="container">
-        <div class="py-5 text-center">
-            <h2>Checkout form</h2>
-            <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form
-                group has a validation
-                state that can be triggered by attempting to submit the form without completing it.</p>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 mb-4">
-
-                <form class="card p-2 mb-3">
-                    <div class="form-group">
-                        <label for="note-search-input">Szukaj notatki (wg tytułu)</label>
-                        <input type="text" class="form-control" id="note-search-input" placeholder="Szukaj...">
-                    </div>
-                </form>
-
-                <form class="card p-2 mb-3" id="note-add-form">
-                    <label for="note-add-input">Dodaj notatkę</label>
-                    <div class="input-group">
-                        <input type="text" id="note-add-input" class="form-control" placeholder="Wpisz tytuł...">
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-secondary">Dodaj</button>
-                        </div>
-                    </div>
-                </form>
-
-                <ul id="notes-list" class="list-group mb-3"></ul>
-            </div>
-
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="mb-3" id="note-title">Tytuł notatki</h4>
-
-                        <div>
-                            <button type="button" class="btn btn-secondary" id="note-editor-btn">Edytor</button>
-                            <button type="button" class="btn btn-primary" id="note-preview-btn">Podgląd</button>
-                            <button type="button" class="btn btn-danger" id="note-remove-btn">Usuń</button>
-                        </div>
-
-                        <hr class="mb-4">
-
-                        <form id="note-content-form">
-                            <textarea class="form-control mb-4" id="note-content" rows="10" placeholder="Treść notatki..."></textarea>
-                            <div id="note-content-preview"></div>
-
-                            <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Zapisz zmiany</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; 2018 Aplikacja Notatki</p>
-        </footer>
-    </div>
-
+    <section class="container" id="view-container"></section>
 </body>
 
 </html>
