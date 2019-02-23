@@ -2,18 +2,26 @@
   "notes": [
     {
       "title": "Notatka 1",
-      "lastModified": 1550324288199,
-      "id": 1
+      "lastModified": 1550954946556,
+      "id": 1,
+      "body": "Notatka 1"
     },
     {
       "title": "Notatka 2",
-      "lastModified": 1550324291027,
-      "id": 2
+      "lastModified": 1550954960933,
+      "id": 2,
+      "body": "Notatka 2"
     },
     {
       "title": "Notatka 3",
-      "lastModified": 1550324295751,
-      "id": 3
+      "lastModified": 1550954970729,
+      "id": 3,
+      "body": "Notatka 3"
+    },
+    {
+      "title": "Notatka 4",
+      "lastModified": 1550954988493,
+      "id": 4
     }
   ]
 }

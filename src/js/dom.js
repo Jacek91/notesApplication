@@ -18,8 +18,6 @@ export const DOMInit = () => {
         notePreviewBtn: document.querySelector('#note-preview-btn'),
         noteRemoveBtn: document.querySelector('#note-remove-btn')
     };
-
-    console.log(DOM);
 };
 
 const get = () => {

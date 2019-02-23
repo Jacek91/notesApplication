@@ -13,13 +13,11 @@ DOMInit();
 export const index = () => {
     view.load(introView).then(() => {
         DOMInit();
-        introInit();
     });
 };
 
 export const editor = context => {
     const noteId = parseInt(context.params.id, 10);
-    console.log(noteId);
 
     view.load(editorView).then(() => {
         DOMInit();
