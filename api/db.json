@@ -1,27 +1,22 @@
 {
   "notes": [
     {
-      "title": "Notatka 1",
-      "lastModified": 1550954946556,
+      "title": "Notes 1",
+      "lastModified": 1551122771920,
       "id": 1,
-      "body": "Notatka 1"
+      "body": "Find a first job"
     },
     {
-      "title": "Notatka 2",
-      "lastModified": 1550954960933,
+      "title": "Notes 2",
+      "lastModified": 1551122782169,
       "id": 2,
-      "body": "Notatka 2"
+      "body": "add projects on github"
     },
     {
-      "title": "Notatka 3",
-      "lastModified": 1550954970729,
+      "title": "Notes 3",
+      "lastModified": 1551122816894,
       "id": 3,
-      "body": "Notatka 3"
-    },
-    {
-      "title": "Notatka 4",
-      "lastModified": 1550954988493,
-      "id": 4
+      "body": "## change life"
     }
   ]
 }
