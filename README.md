@@ -24,4 +24,5 @@ $ npm install
 $ npm run start-api (to run the database with notes based on JSON Server)
 Start new (second) terminal (to run the application)
 $ npm start
+Start your browser and open the following address **http://localhost:7000/**
 ```
